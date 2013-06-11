@@ -35,6 +35,6 @@ soup = BeautifulSoup(downloadResults)
 downloadLink = soup.find("div", { "class" : "download m-bottom_20" }).a['href']
 
 print "Downloading..."
-subprocess.Popen(["wget" , "-O", sys.argv[1] + ".mp3", downloadLink], stdout=devnull, stderr=devnull).wait()
+subprocess.Popen(["wget" , "-O", "Result.mp3", downloadLink], stdout=devnull, stderr=devnull).wait()
 print "Done"
          

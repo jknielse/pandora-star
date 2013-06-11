@@ -5,22 +5,17 @@
 . ~/.libs/colours
 
 function setup {
-    
+       
     bldylw
-    echo "    Installing ffmpeg"
-    sudo apt-get install ffmpeg
+    echo "    Installing beautiful soup"
+    sudo pip install BeautifulSoup
     bldgrn
     echo "    Done"
 
     bldylw
-    echo "    Installing lame"
-    sudo apt-get install lame
-    bldgrn
-    echo "    Done"
-    
-    bldylw
-    echo "    Installing beautiful soup"
-    sudo pip install BeautifulSoup
+    echo "    Creating script aliases"
+    echo "alias downloadmp3='`pwd`/source/download.sh'" >> ~/.bashrc
+    echo "alias downloadmp3list='`pwd`/mp3ListDownload.sh'" >> ~/.bashrc
     bldgrn
     echo "    Done"
 
