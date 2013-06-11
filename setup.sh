@@ -14,7 +14,7 @@ function setup {
 
     bldylw
     echo "    Creating script aliases"
-    echo "alias downloadmp3='`pwd`/source/download.sh'" >> ~/.bashrc
+    echo "export DOWNLOADMP3DIR='`pwd`/source'" >> ~/.bashrc
     echo "alias downloadmp3list='`pwd`/mp3ListDownload.sh'" >> ~/.bashrc
     bldgrn
     echo "    Done"

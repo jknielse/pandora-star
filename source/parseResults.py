@@ -23,7 +23,7 @@ else:
 downloadPageURL = soup.find(itemtype="http://schema.org/MusicRecording").find_all("meta")[2]['content']
 
 devnull = open('/dev/null', 'w')
-subprocess.Popen(["curl" , downloadPageURL , "-o", "DownloadPage.html"],stdout=devnull, stderr=devnull)
+subprocess.Popen(["curl" , downloadPageURL , "-o", "DownloadPage.html"],stdout=devnull, stderr=devnull).wait()
 
 downloadPageFile = open('DownloadPage.html')
 downloadResults = downloadPageFile.read()
