@@ -13,12 +13,14 @@ cd $DOWNLOADMP3DIR
 IFS='\
 '
 
+PARSEDLIST=""
+
 for eachSearch in $SEARCHTERMLIST
 do
-    echo Downloading mp3 for search terms: "$eachSearch"
-    ./download.sh "$eachSearch"
-    mv ./Result.mp3 "$ORIGINALDIR/$eachSearch.mp3"
+    PARSEDLIST="$PARSEDLIST$eachSearch\~"
 done
+
+python DownloadMP3.py $PARSEDLIST
 
 cd -
 

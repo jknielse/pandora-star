@@ -7,8 +7,9 @@
 function setup {
        
     bldylw
-    echo "    Installing beautiful soup"
+    echo "    Installing beautiful soup and selenium"
     sudo pip install BeautifulSoup
+    sudo pip install selenium
     bldgrn
     echo "    Done"
 
